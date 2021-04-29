@@ -1,4 +1,6 @@
-Kiolesis Engine 2.0, wersja środowiska: 1.3 (27.04.2021)
+Kiolesis Engine 2.0, wersja środowiska (frameworka): 1.3 (27.04.2021)
+
+||| Załadowanie i przygotowanie programu na import bibliotek | load.engine
 
 load.engine
 
@@ -220,3 +222,8 @@ engine.KE.version.info - wyświetla informacje o wersji środowiska
 engine.KE.patch.info - wyświetla informacje o ostatniej aktualizacji środowiska
 engine.KE.security.info - wyświetla informacje o ostatnich załatanych lukach w zabezpieczeniach środowiska
 engine.KE.session.end - zamyka sesję środowiska i usuwa ślady po jego użyciu w programie
+
+
+
+
+Obecnie pracuję nad własnym IDE for Kiolesis Engine Framework, który podświetlał by składnię kodu.

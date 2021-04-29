@@ -3,6 +3,6 @@ Edytor tekstu i dodatkowe narzędzia.
 
 Funkcje:
 
-#Edytor tekstu
+=Edytor tekstu
 
-#Kalkulator napisany we własnym języku interpretowanym.
+=Kalkulator napisany we własnym języku interpretowanym.

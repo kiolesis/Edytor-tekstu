@@ -1,0 +1,9 @@
+@@@@@@@@@echo off
+@@@@@@@@@Title Kiolesis Engine 2.0 DLL
+@@@@@@@@@set resource=2.0
+@@@@@@@@@:: Podstawowa i domyślna biblioteka rozszerzeń i ustawień
+@@@@@@@@@set console.code=TAK
+@@@@@@@@@set codepage=TAK
+@@@@@@@@@set console.write=TAK
+@@@@@@@@@set exit.errorlevel=TAK
+@@@@@@@@@set function=TAK

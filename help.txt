@@ -1,0 +1,222 @@
+Kiolesis Engine 2.0, wersja środowiska: 1.3 (27.04.2021)
+
+load.engine
+
+||| Wyświetlanie kodu programu | load.console.code
+
+engine.hide.write.n - @echo off
+engine.show.write.n - @echo on
+engine.show.title nazwa - ustawia nazwę okna konsoli
+engine.hide.title - ustawia nazwę okna konsoli, jako wiersz polecenia
+
+
+||| Strona kodowania | load.codepage
+
+engine.code.page.65001 - chcp 65001
+engine.code.page.850 - chcp 850
+engine.code.page.852 - chcp 852
+
+
+||| Wyświetlanie napisu na ekranie | load.console.write
+
+engine.write - wyświetlenie napisu na ekranie
+engine.write.int zmienna - wyświetla zmienną na ekranie
+engine.clear.console - oczyszczenie ekranu z zapisu
+engine.write.int.look litera - wyświetla wszystkie użyte zmienne rozpoczynające się na literę (litera)
+engine.empty.page - pusta linijka
+engine.color.page kolor - ustawia kolor ekranu i tekstu
+
+
+||| Wyjście z programu | load.exit.errorlevel
+
+engine.errorlevel wartość - ustawia errorlevel (kod błędu)
+engine.exit - exit
+engine.exit(b) - exit /b
+
+
+||| Opóźnienie | load.timeout
+
+engine.timeout wartość - timeout
+engine.timeout.pause.h - pause>>nul
+engine.timeout.pause.s - pause
+
+
+||| Funkcje w programie | load.function
+
+engine.go.to.code określona_funkcja - goto określona funkcja
+engine.call.start określona_funkcja - call określona_funkcja
+engine.own.function.int własna_funkcja - wprowadza własną funkcję
+engine.own.function.start - wykonuje własną funkcję
+engine.list.tui.help - wykonuje help.exe
+engine.start.function.wmic - wykonuje wmic.exe
+
+
+||| Sieć i Internet | load.internet
+
+engine.ping.localhost - ping localhost
+engine.ping adres - ping adres
+engine.netstat - netstat
+engine.ipconfig - ipconfig
+engine.ipconfig.all - ipconfig /all
+
+
+||| Data i godzina | load time.zone
+
+engine.date.write - wyświetla datę
+engine.time.write - wyświetla godzinę
+engine.date.time.write - wyświetla datę i godzinę
+engine.time.date.write - wyświetla godzinę i datę
+engine.date.set - pozwala na wprowadzenie nowej daty
+
+
+||| Zmienne w programie | load.int
+
+engine.set.int zmienna - pozwala na wprowadzenie zmiennej
+engine.set.int.calc zmienna=1+2 - pozwala na obliczenie działania
+
+
+||| Losowanie i prawdopodobieństwo | load.math
+
+engine.random zmienna - losuje liczbę z zakresu 1 do 99999
+engine.random(1) zmienna - losuje liczbę złożonej z jednej cyfry
+engine.random(2) zmienna - losuje liczbę złożonej z dwóch cyfr
+engine.random(3) zmienna - losuje liczbę złożonej z trzech cyfr
+engine.random(4) zmienna - losuje liczbę złożonej z czterech cyfr
+engine.load.security.one#engine.random.crypt.int - umożliwia wpisanie jednej liczby, która zostanie zaszyfrowana przez drugą liczbę
+engine.roznica.write - wykonuje działanie liczba1 - liczba2 = wynik (napis)
+engine.suma.write - wykonuje działanie liczba1 + liczba2 = wynik (napis)
+engine.roznica.hide - wykonuje działanie liczba1 - liczba2 = wynik
+engine.suma.hide - wykonuje działanie liczba1 + liczba2 = wynik
+
+
+||| System plików | load.system_file
+
+engine.inventory.documents zmienna - przypisuje do zmiennej ścieżkę do dokumentów użytkownika
+engine.inventory.desktop zmienna - przypisuje do zmiennej ścieżkę do pulpitu użytkownika
+engine.inventory.music zmienna - przypisuje do zmiennej ścieżkę do muzyki użytkownika
+engine.inventory.videos zmienna - przypisuje do zmiennej ścieżkę do wideo użytkownika
+engine.real.system.file.verify.all - sfc /scannow
+engine.system_file.location lokalizacja - cd lokalizacja
+engine.system_file.return.location.ke - przywraca normalną lokalizację pracy środowiska
+engine.system_file.exist ścieżka\do\pliku - jeśli dany plik istnieje, errorlevel=30, jeśli nie istnieje errorlevel=40
+engine.system_file.temp.file.name nazwa_nowego_pliku - rezerwuje nazwę dla danego pliku
+engine.system_file.temp.file.location lokalizacja_pliku - rezerwuje lokalizację dla danego pliku
+engine.system_file.temp.file.write.to.file tekst_pisany_do_pliku - pisze do pliku metodą nadpisania
+engine.system_file.temp.file.off - zakończ funkcję pisania do pliku
+
+||| Interakcja i komunikacja | load.interaction
+
+engine.messagebox.vbs.all treść_wiadomości - tworzy plik wiadomości, a następnie go uruchamia
+engine.messagebox.msg.all treść_wiadomości - wyświetla wiadomość dla wszystkich użytkowników
+engine.messagebox.msg.this.user treść_wiadomości - wyświetla wiadomość dla aktualnego użytkownika
+engine.system.logoff - logoff.exe
+engine.choice.yes.or.no - możliwość wyboru tak/nie
+engine.choice.1.or.2 - możliwość wyboru 1 lub 2
+engine.choice.1.or.2.or.3 - możliwość wyboru 1 lub 2 lub 3
+engine.choice.1.or.2.or.3.or.4 - możliwość wyboru 1 lub 2 lub 3 lub 4
+
+||| Użytkownik i personalizacja | load.user
+
+engine.user nazwa_użytkownika - tworzy zmienną, która będzie potrzebna do formularza logowania, jako nazwa użytkownika
+engine.password hasło_do_logowania - tworzy zmienną, która będzie potrzebna do formularza logowania, jako hasło
+engine.login - tekstowy panel logowania do konta w programie, logowanie odbywa się za pomocą danych ze zmiennych lub z poziomu rejestracji
+engine.sign - tekstowy panel rejestracji do konta w progrgamie, zapis do zmiennych user i password
+engine.panel.of.user - wyświetla informacje o użytkowniku w programie
+engine.session.logoff - wylogowywuje użytkownika, usuwa login i hasło z pamięci programu
+engine.user.write - wyświetla nazwę użytkownika na ekranie
+
+||| Modyfikacje | load.mods
+::: Są to dodatkowe komendy, które wymagają użycia bibliotek, dla których będą ich modyfikacją.
+
+engine.mods.internet - modyfikacja dla biblioteki internet
+(
+engine.mods.internet.page.start strona - otwiera stronę internetową w domyślnej przeglądarce
+engine.mods.internet.taskkill.msedge - zamyka proces msedge.exe
+engine.mods.internet.taskkill.chrome - zamyka proces chrome.exe
+engine.mods.internet.taskkill.firefox - zamyka proces firefox.exe
+)
+
+engine.mods.if_stack - modyfikacja dla biblioteki if_stack
+(
+engine.mods.if_stack.loader litera - wyświetla zmienne rozpoczynające się na literę
+)
+
+engine.mods.system_file - modyfikacja dla biblioteki system_file
+(
+engine.mods.system_file.start.disk.c - otwiera folder z dyskiem c:\
+engine.mods.system_file.start.disk.e - otwiera folder z dyskiem e:\
+engine.mods.system_file.start.disk.d - otwiera folder z dyskiem d:\
+engine.mods.system_file.start.disk.f - otwiera folder z dyskiem f:\
+)
+
+
+||| Bezpieczeństwo i szyfrowanie | load.security
+
+engine.security.password.strong.verify hasło - weryfikuje siłę wpisanego hasła (ciągu)
+engine.security.password.generate - generuje silne hasło złożone z liczb i wyświetla je na ekranie
+engine.encryption - wywołuje program hashowanie liczb w wersji tekstowej
+engine.encryption.test - wyświetla na ekranie przyszłą funkcję szyfrowania
+engine.encryption.list - wyświetla dostępne funkcje szyfrowania
+engine.security.hashfile.verify.md5 ścieżka\do\pliku - weryfikuje hash (skrót) pliku
+engine.security.hashfile.verify.sha1 ścieżka\do\pliku - weryfikuje hash (skrót) pliku
+engine.security.hashfile.verify.sha256 ścieżka\do\pliku - weryfikuje hash (skrót) pliku
+engine.exploit.test.component.internet - testuje komponent internet pod kątem niezabezpieczonych wartości
+engine.exploit.test.component.tools - testuje komponent tools pod kątem niezabezpieczonych wartości
+engine.exploit.test.component.KE.stack - testuje komponent KE.stack pod kątem niezabezpieczonych wartości
+
+
+||| Warunki w programie | load.if_stack
+
+engine.if if %zmienna1%==%zmienna2% goto dalej - instrukcja warunkowa
+
+
+||| Narzędzia | load.tools
+
+engine.system.info - wyświetla informacje o systemie
+engine.windows.info.tui - wyświetla informacje o kompilacji systemu w wersji tekstowej
+engine.windows.info.gui - wyświetla informacje o kompilacji systemu w wersji graficznej
+engine.battery.status.info.tui - wyświetla informacje o stanie zużycia baterii
+engine.cpu.status.info.tui - wyświetla informacje o stanie zużycia cpu
+engine.iexpress.converter - uruchamia narzędzie iexpress.exe
+engine.start.loop - przygotowywuje program do użycia pętli
+engine.loop wartość - startuje pętlę (ilość: wartość) w programie
+engine.loop.exit - kończy proces pętli w programie
+engine.control - uruchamia panel sterowania
+engine.component.clean.start - uruchamia proces oczyszczania komponentów ze zbędnych wartości
+
+
+||| Procesy i zarządzanie | load.manager
+
+engine.use.taskkill.h nazwa - kończy proces o nazwie nazwa
+engine.create.process nazwa - tworzy proces o nazwie nazwa
+engine.create.subprocess nazwa - call nazwa
+engine.use.debugtool.taskkill.h - kończy proces o nazwie nazwa i zwraca kod błędu na ekranie
+engine.restart.process.explorer - kończy proces explorer.exe i ponownie go włącza
+
+
+||| Debugowanie programu | load.debug
+
+engine.debug.on - pozwala na proces debugowania
+engine.debug.off - nie pozwala na proces debugowania
+engine.debug.start ścieżka\do\pliku - startuje proces debugowania, aby zebrać kod błędu
+engine.debug.show - wyświetla na ekranie, czy debugowanie jest włączone
+
+
+||| Dane diagnostyczne i diagnostyka | load.diagnostics
+
+engine.diagnostics.collect.this.event - zapamiętuje dane diagnostyczne z danego zdarzenia
+engine.diagnostics.collect.data.save - zapisuje zebrane dane do pliku tekstowego
+engine.diagnostics.collect.info - wyświetla informacje o zbieranych danych diagnostycznych
+
+
+||| Komentarze w programie oraz dodatki | load.KE.stack
+
+( - rozpoczyna nowy stos komend
+) - kończy stary stos komend
+KE - komentarz widoczny w kodzie programu
+@ - pozwala na zmianę komend poprzez dopisanie "@" do początku komendy
+engine.KE.loads.write - wyświetla użyte biblioteki w programie
+engine.KE.version.info - wyświetla informacje o wersji środowiska
+engine.KE.patch.info - wyświetla informacje o ostatniej aktualizacji środowiska
+engine.KE.security.info - wyświetla informacje o ostatnich załatanych lukach w zabezpieczeniach środowiska
+engine.KE.session.end - zamyka sesję środowiska i usuwa ślady po jego użyciu w programie

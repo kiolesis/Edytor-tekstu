@@ -1,3 +1,4 @@
+:: Ścieżka do frameworka powinna się kończyć na \keengine (folder).
 cd "%userprofile%\Desktop\keengine"
 call engine.hide.write.n
 
@@ -28,3 +29,5 @@ call engine.write "Wciśnij dowolny przycisk, aby wyjść."
 call engine.timeout.pause.h
 call engine.errorlevel 0
 call engine.exit
+
+:: Koniec programu, aplikacja zwróci kod błędu równy 0.

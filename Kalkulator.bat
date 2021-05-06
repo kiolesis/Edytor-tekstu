@@ -1,5 +1,5 @@
 :: Ścieżka do frameworka powinna się kończyć na \keengine (folder).
-cd "%userprofile%\Desktop\keengine"
+cd "C:\KiolEngine"
 call engine.hide.write.n
 
 call load.engine&&call load.console.code&&call load.codepage&&call load.console.write&&call load.exit.errorlevel&&call load.timeout
